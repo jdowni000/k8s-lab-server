@@ -18,11 +18,13 @@ func main() {
 
 func simulateDog(res http.ResponseWriter, req *http.Request) {
 
+	res.Write([]byte("<html>"))
+	
 	// make a new dog
 	dog := NewDog("Ace", res)
 	res.Write([]byte("Bruce Wayne goes to the pet store and comes home with a dog named " + dog.Name + "<br>\n"))
 
-	res.Write([]byte("<html>"))
+	
 
 	// begin simulating dog
 	for {
